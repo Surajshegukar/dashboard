@@ -153,17 +153,18 @@ const AddWidgetModal = ({ onClose }) => {
           <div className="relative ml-4">
             <button
               onMouseEnter={() => setSlideInput(true)}
-              className={`px-4 py-2 bg-green-500 text-white rounded-md text-sm transition-transform duration-300 transform ${slideInput ? '-translate-x-12 opacity-0' : 'translate-x-0 opacity-100'}`}
+              
+              className={`px-4 py-2 bg-green-500 relative top-4 text-white rounded-md text-sm transition-transform duration-300 transform ${slideInput ? '-translate-x-12 opacity-0' : 'translate-x-0 opacity-100'}`}
             >
               Add Tab
             </button>
-            <div className={`flex items-center transition-transform duration-500 ${slideInput ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div onMouseLeave={()=>setSlideInput(false)} className={`flex items-center relative bottom-4 transition-transform duration-500 ${slideInput ? 'translate-x-0' : 'translate-x-full'}`}>
               <input
                 type="text"
                 placeholder="New Tab Name"
                 value={newTabName}
                 onChange={(e) => setNewTabName(e.target.value)}
-                className="ml-4 px-2 py-1 border rounded-md text-sm"
+                className="ml-4 px-2  py-1 border rounded-md text-sm"
               />
               <button
                 onClick={handleAddTab}
