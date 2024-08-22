@@ -1,6 +1,6 @@
 
 
-```markdown
+
 # Dashboard Application
 
 A responsive and interactive dashboard application built with React, showcasing various chart widgets. This application allows users to add, edit, and search through different widgets dynamically.
